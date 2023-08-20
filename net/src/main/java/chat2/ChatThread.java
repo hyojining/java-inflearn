@@ -48,7 +48,7 @@ public class ChatThread extends Thread{
 
 			while((line = br.readLine()) != null) {
 				if("/quit".equals(line)) {
-					throw new RuntimeException("접속 종료");
+					break;
 				}
 				// 나를 포함한 ChatThread에게 메시지를 보낸다.
 				broadcast(name + " : " + line, true);
